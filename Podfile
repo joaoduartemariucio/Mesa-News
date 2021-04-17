@@ -15,6 +15,9 @@ target 'Mesa News' do
   pod 'RxDataSources'
   pod 'RxSwiftExt'
   pod 'RxGesture'
+  
+  # MARK: - Componentes
+  pod 'AnyFormatKit'
 
   target 'Mesa NewsTests' do
     inherit! :search_paths

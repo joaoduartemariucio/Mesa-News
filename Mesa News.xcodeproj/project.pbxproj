@@ -29,6 +29,10 @@
 		F635A3A8262B83AE005F92D4 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3A3262B83AE005F92D4 /* BaseViewModel.swift */; };
 		F635A3A9262B83AE005F92D4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3A4262B83AE005F92D4 /* BaseViewController.swift */; };
 		F635A3AA262B83AE005F92D4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3A5262B83AE005F92D4 /* Coordinator.swift */; };
+		F635A3B5262B85D9005F92D4 /* GlobalImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3B4262B85D9005F92D4 /* GlobalImports.swift */; };
+		F635A3CC262B88AE005F92D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3CB262B88AE005F92D4 /* Constants.swift */; };
+		F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */; };
+		F635A3DB262B89DB005F92D4 /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3DA262B89DB005F92D4 /* CadastroView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		F635A3A3262B83AE005F92D4 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F635A3A4262B83AE005F92D4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F635A3A5262B83AE005F92D4 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F635A3B4262B85D9005F92D4 /* GlobalImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalImports.swift; sourceTree = "<group>"; };
+		F635A3CB262B88AE005F92D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		F635A3DA262B89DB005F92D4 /* CadastroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroView.swift; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +212,8 @@
 		F635A347262B7F47005F92D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F635A3D1262B89B3005F92D4 /* Cadastro */,
+				F635A3D0262B89AE005F92D4 /* Login */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +315,7 @@
 		F635A373262B802C005F92D4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F635A3B4262B85D9005F92D4 /* GlobalImports.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 		F635A374262B8033005F92D4 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				F635A3CB262B88AE005F92D4 /* Constants.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -353,6 +365,22 @@
 				F635A394262B83A5005F92D4 /* LoginCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F635A3D0262B89AE005F92D4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F635A3D1262B89B3005F92D4 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				F635A3DA262B89DB005F92D4 /* CadastroView.swift */,
+				F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */,
+			);
+			path = Cadastro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -596,10 +624,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F635A399262B83A5005F92D4 /* LoginCoordinator.swift in Sources */,
+				F635A3DB262B89DB005F92D4 /* CadastroView.swift in Sources */,
 				F635A39D262B83A5005F92D4 /* CadastroCoordinator.swift in Sources */,
+				F635A3B5262B85D9005F92D4 /* GlobalImports.swift in Sources */,
 				F635A3AA262B83AE005F92D4 /* Coordinator.swift in Sources */,
 				F635A306262B7A70005F92D4 /* ViewController.swift in Sources */,
+				F635A3CC262B88AE005F92D4 /* Constants.swift in Sources */,
 				F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */,
+				F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */,
 				F635A3A9262B83AE005F92D4 /* BaseViewController.swift in Sources */,
 				F635A37B262B80E4005F92D4 /* APIClient.swift in Sources */,
 				F635A3A7262B83AE005F92D4 /* BaseModel.swift in Sources */,

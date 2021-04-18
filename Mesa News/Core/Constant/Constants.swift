@@ -31,7 +31,11 @@ struct Constants {
         }
         
         struct Image {
-            
+            static let ic_arroba = "ic_arroba"
+            static let ic_password_visivel = "ic_password_visivel"
+            static let ic_password_invisivel = "ic_password_invisivel"
+            static let ic_pessoa = "ic_pessoa"
+            static let ic_senha = "ic_senha"
         }
     }
 }

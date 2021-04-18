@@ -55,6 +55,10 @@
 		F6B50D27262BFC710014FB0D /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D26262BFC710014FB0D /* UserRouter.swift */; };
 		F6B50D2C262BFDA30014FB0D /* TokenCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */; };
 		F6B50D31262BFDF60014FB0D /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D30262BFDF60014FB0D /* UserClient.swift */; };
+		F6B50D36262BFE4A0014FB0D /* UserSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D35262BFE4A0014FB0D /* UserSessionHelper.swift */; };
+		F6B50D3B262BFE860014FB0D /* PreferencesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D3A262BFE860014FB0D /* PreferencesHelper.swift */; };
+		F6B50D40262BFEA10014FB0D /* EncoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D3F262BFEA10014FB0D /* EncoderHelper.swift */; };
+		F6B50D46262BFEB60014FB0D /* DecoderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D45262BFEB60014FB0D /* DecoderHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,10 @@
 		F6B50D26262BFC710014FB0D /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCodable.swift; sourceTree = "<group>"; };
 		F6B50D30262BFDF60014FB0D /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
+		F6B50D35262BFE4A0014FB0D /* UserSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionHelper.swift; sourceTree = "<group>"; };
+		F6B50D3A262BFE860014FB0D /* PreferencesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesHelper.swift; sourceTree = "<group>"; };
+		F6B50D3F262BFEA10014FB0D /* EncoderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderHelper.swift; sourceTree = "<group>"; };
+		F6B50D45262BFEB60014FB0D /* DecoderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderHelper.swift; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -360,7 +368,11 @@
 		F635A372262B8025005F92D4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50D45262BFEB60014FB0D /* DecoderHelper.swift */,
+				F6B50D3F262BFEA10014FB0D /* EncoderHelper.swift */,
+				F6B50D3A262BFE860014FB0D /* PreferencesHelper.swift */,
 				F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */,
+				F6B50D35262BFE4A0014FB0D /* UserSessionHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -759,6 +771,7 @@
 				F635A399262B83A5005F92D4 /* LoginCoordinator.swift in Sources */,
 				F6B50D0F262BDF600014FB0D /* BemVindoViewController.swift in Sources */,
 				F6B50CA4262B911D0014FB0D /* TranslateHelper.swift in Sources */,
+				F6B50D36262BFE4A0014FB0D /* UserSessionHelper.swift in Sources */,
 				F635A3DB262B89DB005F92D4 /* CadastroView.swift in Sources */,
 				F635A39D262B83A5005F92D4 /* CadastroCoordinator.swift in Sources */,
 				F6B50CCA262BAD330014FB0D /* ErrorModel.swift in Sources */,
@@ -769,12 +782,15 @@
 				F6B50CB8262B95BA0014FB0D /* CadastroModel.swift in Sources */,
 				F635A3CC262B88AE005F92D4 /* Constants.swift in Sources */,
 				F6B50CA9262B91640014FB0D /* UIView+Extensions.swift in Sources */,
+				F6B50D46262BFEB60014FB0D /* DecoderHelper.swift in Sources */,
 				F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */,
 				F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */,
 				F6B50CDA262BD3FF0014FB0D /* UIViewController+Extension.swift in Sources */,
 				F635A3E5262B8AF3005F92D4 /* UIColor+Extensions.swift in Sources */,
+				F6B50D3B262BFE860014FB0D /* PreferencesHelper.swift in Sources */,
 				F635A3A9262B83AE005F92D4 /* BaseViewController.swift in Sources */,
 				F6B50D22262BEC350014FB0D /*  NSAttributedString+Extension.swift in Sources */,
+				F6B50D40262BFEA10014FB0D /* EncoderHelper.swift in Sources */,
 				F635A37B262B80E4005F92D4 /* APIClient.swift in Sources */,
 				F635A3A7262B83AE005F92D4 /* BaseModel.swift in Sources */,
 				F635A3A8262B83AE005F92D4 /* BaseViewModel.swift in Sources */,

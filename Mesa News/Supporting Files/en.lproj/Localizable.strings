@@ -33,6 +33,8 @@
 "tela_login" = "Log in";
 "tela_login_descricao" = "Fill in the fields below to login";
 "entrar" = "Enter";
+"erro_credenciais_invalidas" = "Your credentials are invalid, check the data provided or register.";
+"erro_default_login" = "Failed to login, please check the data provided and try again.";
 
 //MARK: - Tela Home
 "tela_home" = "News";

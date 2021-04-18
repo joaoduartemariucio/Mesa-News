@@ -19,6 +19,8 @@ struct Constants {
             static let name = "name"
             static let email = "email"
             static let password = "password"
+            static let currentPage = "current_page"
+            static let perPage = "per_page"
         }
     }
     

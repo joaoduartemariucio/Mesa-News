@@ -8,7 +8,7 @@
 import Foundation
 
 enum LoginStatus {
-    case logadoSucesso, mostrarMensagensErro, resetarErrosFormulario,`default`
+    case logadoSucesso, mostrarMensagensErro, mostrarMensagensErroAPI, resetarErrosFormulario,`default`
 }
 
 protocol LoginViewModelInput {
@@ -23,6 +23,7 @@ protocol LoginViewModelOutput {
     
     var feedback: BehaviorRelay<LoginStatus> { get set }
     var errosLogin: [ErrorModel<LoginErrorType>] { get }
+    var errosLoginAPI: [ErrorCodable] { get set }
 }
 
 class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
@@ -60,6 +61,7 @@ class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
     var txtSenhaObserver: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
     
     func logarUsuario() {
+        isLoading.accept(true)
         
         feedback.accept(.resetarErrosFormulario)
         
@@ -67,6 +69,29 @@ class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
             feedback.accept(.mostrarMensagensErro)
             return
         }
+        
+        UserClient.login(login: model).asObservable().subscribe(
+            onNext: { result in
+                self.isLoading.accept(false)
+                
+                if let error = result.errors {
+                    self.errosLoginAPI = error
+                    self.feedback.accept(.mostrarMensagensErroAPI)
+                    return
+                }
+                
+                if let token = result.token {
+                    let userSession = UserSession(token: token)
+                    UserSessionHelper.instance.salvarAutenticacaoUsuario(userSession)
+                    self.feedback.accept(.logadoSucesso)
+                }
+            },
+            onError: { error in
+                self.isLoading.accept(false)
+                let messageError = APIErrorMessageHelper.instance.retornaMensagemErroAPI(erro: error)
+                self.mostrarMensagem.accept(messageError)
+            }
+        ).disposed(by: disposable)
     }
     
     //    MARK: LoginViewModel Outputs
@@ -77,4 +102,6 @@ class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
             return model.errors
         }
     }
+    
+    var errosLoginAPI: [ErrorCodable] = [ErrorCodable]()
 }

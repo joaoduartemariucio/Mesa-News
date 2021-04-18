@@ -51,13 +51,19 @@ class LoginViewController: UIViewController, BaseViewController {
                     .text
                     .bind(to: viewModel.txtSenhaObserver)
                     .disposed(by: disposable)
-
+        
         viewModel.mostrarMensagem.bind { value in
-            
+            if !value.isEmpty {
+                self.mostrarMensagem(value)
+            }
         }.disposed(by: disposable)
         
         viewModel.isLoading.bind { value in
-            
+            if value {
+                self.showLoading("por_favor_aguarde".translate)
+            }else {
+                self.hideLoading()
+            }
         }.disposed(by: disposable)
         
         viewModel.feedback.bind { value in
@@ -68,10 +74,18 @@ class LoginViewController: UIViewController, BaseViewController {
     func tratarStatus(_ status: LoginStatus){
         switch status {
         case .logadoSucesso:
-            
+            irParaTelaHome()
             break
         case .mostrarMensagensErro:
             presentationView.setMensagensErro(erros: viewModel.errosLogin)
+            break
+        case .mostrarMensagensErroAPI:
+            let errors = viewModel.errosLoginAPI
+            if errors.contains(where: { $0.code == "INVALID_CREDENTIALS" }) {
+                self.mostrarMensagem("erro_credenciais_invalidas".translate)
+            }else {
+                self.mostrarMensagem("erro_default_login".translate)
+            }
             break
         case .resetarErrosFormulario:
             presentationView.resetarErrosFormulario()
@@ -79,5 +93,11 @@ class LoginViewController: UIViewController, BaseViewController {
         default:
             break
         }
+    }
+    
+    func irParaTelaHome(){
+        self.coordinator?.parentCoordinator?.home()
+        self.navigationController?.viewControllers.removeAll(where: { $0 == self  || $0 is BemVindoViewController})
+        self.coordinator?.parentCoordinator?.childDidFinish(self.coordinator)
     }
 }

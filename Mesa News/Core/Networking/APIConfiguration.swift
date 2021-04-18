@@ -30,6 +30,10 @@ enum ContentType: String {
     case formEncode = "application/x-www-form-urlencoded"
 }
 
+enum AuthenticationType: String {
+    case bearer = "Bearer"
+}
+
 enum RequestParams {
     
     case body(_:Parameters)

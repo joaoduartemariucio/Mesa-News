@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - NoticiasCodable
 struct NoticiasCodable: Codable {
-    let pagination: PaginationCodable
+    let pagination: PaginationCodable?
     let data: [NoticiaCodable]
 }
 

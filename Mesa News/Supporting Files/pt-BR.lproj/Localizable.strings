@@ -33,6 +33,8 @@
 "tela_login" = "Entrar";
 "tela_login_descricao" = "Preencha os campos abaixo para entrar";
 "entrar" = "Entrar";
+"erro_credenciais_invalidas" = "Suas credenciais invalidas, verifique os dados informados ou cadastre-se.";
+"erro_default_login" = "Falha ao fazer login, por favor verifique os dados informados e tente novamente.";
 
 //MARK: - Tela Home
 "tela_home" = "Notícias";

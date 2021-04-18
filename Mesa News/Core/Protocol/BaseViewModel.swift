@@ -11,7 +11,7 @@ protocol BaseViewModel {
     
     var disposable: DisposeBag  { get set }
     var mostrarMensagem: BehaviorRelay<String>  { get set }
-    var isLoad: BehaviorRelay<Bool>  { get set }
+    var isLoading: BehaviorRelay<Bool>  { get set }
 
     func viewDidLoad()
 }

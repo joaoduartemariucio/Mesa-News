@@ -18,7 +18,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     
     func start() {
         navigationController.delegate = self
-        bemVindo()
+        cadastro()
     }
     
     func bemVindo(){

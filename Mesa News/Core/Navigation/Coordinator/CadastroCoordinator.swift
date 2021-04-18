@@ -22,6 +22,8 @@ class CadastroCoordinator: Coordinator {
     }
     
     func cadastreSe(){
-       
+        let vc = CadastroViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }

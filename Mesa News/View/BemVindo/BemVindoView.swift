@@ -56,7 +56,7 @@ class BemVindoView: UIView, BaseView {
         btn.backgroundColor = .white
         btn.layer.borderWidth = 2
         btn.layer.borderColor = UIColor.colorPrimary.cgColor
-        btn.setTitle("entrar".translate, for: .normal)
+        btn.setTitle("tela_login".translate, for: .normal)
         btn.setTitleColor(.colorPrimaryDark, for: .normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         btn.translatesAutoresizingMaskIntoConstraints = false
@@ -88,7 +88,7 @@ class BemVindoView: UIView, BaseView {
         
         addSubview(imagemLogo)
         NSLayoutConstraint.activate([
-            imagemLogo.topAnchor.constraint(equalTo: topAnchor, constant: size.height * 0.125),
+            imagemLogo.topAnchor.constraint(equalTo: topAnchor, constant: size.height * 0.10),
             imagemLogo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: size.width * 0.075),
             imagemLogo.heightAnchor.constraint(equalToConstant: size.height * 0.20),
             imagemLogo.widthAnchor.constraint(equalToConstant: size.width * 0.20)

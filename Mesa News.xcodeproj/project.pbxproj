@@ -52,6 +52,9 @@
 		F6B50D0F262BDF600014FB0D /* BemVindoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D0E262BDF600014FB0D /* BemVindoViewController.swift */; };
 		F6B50D15262BE0680014FB0D /* BemVindoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D14262BE0680014FB0D /* BemVindoViewModel.swift */; };
 		F6B50D22262BEC350014FB0D /*  NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D21262BEC350014FB0D /*  NSAttributedString+Extension.swift */; };
+		F6B50D27262BFC710014FB0D /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D26262BFC710014FB0D /* UserRouter.swift */; };
+		F6B50D2C262BFDA30014FB0D /* TokenCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */; };
+		F6B50D31262BFDF60014FB0D /* UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D30262BFDF60014FB0D /* UserClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +133,9 @@
 		F6B50D0E262BDF600014FB0D /* BemVindoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemVindoViewController.swift; sourceTree = "<group>"; };
 		F6B50D14262BE0680014FB0D /* BemVindoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BemVindoViewModel.swift; sourceTree = "<group>"; };
 		F6B50D21262BEC350014FB0D /*  NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		F6B50D26262BFC710014FB0D /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCodable.swift; sourceTree = "<group>"; };
+		F6B50D30262BFDF60014FB0D /* UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClient.swift; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -391,6 +397,7 @@
 		F635A376262B80AD005F92D4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50D26262BFC710014FB0D /* UserRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -398,6 +405,7 @@
 		F635A377262B80B4005F92D4 /* Codable */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */,
 			);
 			path = Codable;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 		F635A378262B80BA005F92D4 /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50D30262BFDF60014FB0D /* UserClient.swift */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -773,9 +782,12 @@
 				F635A39A262B83A5005F92D4 /* BemVindoCoordinator.swift in Sources */,
 				F6B50CEB262BD6240014FB0D /* LoginView.swift in Sources */,
 				F635A390262B8396005F92D4 /* MainCoordinator.swift in Sources */,
+				F6B50D2C262BFDA30014FB0D /* TokenCodable.swift in Sources */,
+				F6B50D31262BFDF60014FB0D /* UserClient.swift in Sources */,
 				F6B50CFC262BD6A00014FB0D /* LoginModel.swift in Sources */,
 				F6B50D01262BD9410014FB0D /* LoginErrorType.swift in Sources */,
 				F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */,
+				F6B50D27262BFC710014FB0D /* UserRouter.swift in Sources */,
 				F6B50D07262BDF540014FB0D /* BemVindoView.swift in Sources */,
 				F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */,
 				F635A3A6262B83AE005F92D4 /* BaseView.swift in Sources */,

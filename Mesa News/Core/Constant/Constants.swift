@@ -12,7 +12,7 @@ struct Constants {
     struct API {
         
         struct ProductionServer {
-            static let baseURL = "https://mesa-news-api.herokuapp.com"
+            static let baseURL = "https://mesa-news-api.herokuapp.com/v1"
         }
         
         struct ParametersKeys {

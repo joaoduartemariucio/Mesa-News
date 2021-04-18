@@ -37,6 +37,8 @@ struct Constants {
             static let ic_password_invisivel = "ic_password_invisivel"
             static let ic_pessoa = "ic_pessoa"
             static let ic_senha = "ic_senha"
+            static let ic_noticia_nao_favoritada = "ic_noticia_nao_favoritada"
+            static let ic_noticia_favoritada = "ic_noticia_favoritada"
         }
     }
 }

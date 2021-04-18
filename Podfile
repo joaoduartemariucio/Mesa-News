@@ -18,6 +18,7 @@ target 'Mesa News' do
   
   # MARK: - Componentes
   pod 'AnyFormatKit'
+  pod 'Nuke'
 
   target 'Mesa NewsTests' do
     inherit! :search_paths

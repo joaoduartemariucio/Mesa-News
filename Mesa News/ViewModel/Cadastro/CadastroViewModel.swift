@@ -78,7 +78,9 @@ class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewMod
     var txtConfirmarSenhaObserver: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
     
     func cadastrarUsuario() {
+        
         feedback.accept(.resetarErrosFormulario)
+        
         if !model.isDadosCadastroValidos {
             feedback.accept(.mostrarMensagensErro)
             return

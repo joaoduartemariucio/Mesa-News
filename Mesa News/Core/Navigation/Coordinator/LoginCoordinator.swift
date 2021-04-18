@@ -21,7 +21,9 @@ class LoginCoordinator: Coordinator {
         login()
     }
     
-    func login(){
-        
+    func login() {
+        let vc = LoginViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }

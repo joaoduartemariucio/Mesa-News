@@ -47,6 +47,7 @@
 		F6B50CF0262BD6300014FB0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CEF262BD6300014FB0D /* LoginViewController.swift */; };
 		F6B50CF6262BD64E0014FB0D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CF5262BD64E0014FB0D /* LoginViewModel.swift */; };
 		F6B50CFC262BD6A00014FB0D /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CFB262BD6A00014FB0D /* LoginModel.swift */; };
+		F6B50D01262BD9410014FB0D /* LoginErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50D00262BD9410014FB0D /* LoginErrorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		F6B50CEF262BD6300014FB0D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F6B50CF5262BD64E0014FB0D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F6B50CFB262BD6A00014FB0D /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		F6B50D00262BD9410014FB0D /* LoginErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorType.swift; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B50CFB262BD6A00014FB0D /* LoginModel.swift */,
+				F6B50D00262BD9410014FB0D /* LoginErrorType.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -740,6 +743,7 @@
 				F6B50CEB262BD6240014FB0D /* LoginView.swift in Sources */,
 				F635A390262B8396005F92D4 /* MainCoordinator.swift in Sources */,
 				F6B50CFC262BD6A00014FB0D /* LoginModel.swift in Sources */,
+				F6B50D01262BD9410014FB0D /* LoginErrorType.swift in Sources */,
 				F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */,
 				F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */,
 				F635A3A6262B83AE005F92D4 /* BaseView.swift in Sources */,

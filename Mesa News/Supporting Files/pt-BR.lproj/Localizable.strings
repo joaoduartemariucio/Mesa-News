@@ -5,3 +5,21 @@
   Created by João Vitor Duarte Mariucio on 17/04/21.
   
 */
+
+//MARK: - Tela Cadastro
+"tela_cadastro" = "Cadastro";
+"tela_cadastro_descricao" = "Para fazer seu cadastro basta preencher todos os campos abaixo";
+"nome_completo" = "Nome completo";
+"email" = "E-Mail";
+"senha" = "Senha";
+"confirmar_senha" = "Confirmar senha";
+"confirmar" = "Confirmar";
+"nome_vazio" = "O campo nome não pode ser vazio";
+"email_vazio" = "O campo e-mail não pode ser vazio";
+"email_invalido" = "O e-mail digitado é inválido";
+"senha_vazia" = "O campo senha não pode ser vazio";
+"senha_curta" = "A senha digita é muito curta";
+"senha_fraca" = "A senha digita é muito fraca";
+"confirmar_senha_vazio" = "O campo confirmar senha não pode ser vazio";
+"senhas_divergentes" = "As senha estão diferentes";
+"usuario_cadastrado_sucesso" = "Seu usuário foi cadastrado com sucesso";

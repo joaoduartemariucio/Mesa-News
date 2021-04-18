@@ -5,3 +5,21 @@
   Created by João Vitor Duarte Mariucio on 17/04/21.
   
 */
+
+//MARK: - Tela Cadastro
+"tela_cadastro" = "Registration";
+"tela_cadastro_descricao" = "To register, just fill in all the fields below";
+"nome_completo" = "Full name";
+"email" = "E-Mail";
+"senha" = "Password";
+"confirmar_senha" = "Confirm password";
+"confirmar" = "Confirm";
+"nome_vazio" = "The name field cannot be empty";
+"email_vazio" = "The email field cannot be empty";
+"email_invalido" = "The email you entered is invalid";
+"senha_vazia" = "The password field cannot be empty";
+"senha_curta" = "The password entered is too short";
+"senha_fraca" = "The password entered is too weak";
+"confirmar_senha_vazio" = "The confirm password field cannot be empty";
+"senhas_divergentes" = "The passwords are different";
+"usuario_cadastrado_sucesso" = "Your user has been successfully registered";

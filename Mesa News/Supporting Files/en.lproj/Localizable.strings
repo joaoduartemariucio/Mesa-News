@@ -38,3 +38,19 @@
 "tela_home" = "News";
 "ultimas_noticias" = "Latest news";
 "noticias_destaque" = "Highlights";
+
+//MARK: - Erros API
+"erro_noDecoded" = "Error when searching for data, try reloading the screen";
+"erro_noContent" = "Nothing found in our database";
+"erro_badRequest" = "Failed to request the server refuses to respond, try to check the store if there is a new version of the app";
+"erro_unauthorized" = "You are not authorized to use this service";
+"erro_forbidden" = "Our server refused your request, try reloading the screen";
+"erro_notFound" = "This feature has changed, check the store to see if there is a new version of the app";
+"erro_noAllowed" = "Resource not found, try to resend your request";
+"erro_conflict" = "Resource poorly processed, try to resend your request";
+"erro_internalServerError" = "Our server is not responding, try to resend your request later";
+"erro_unprocessableEntity" = "The data entered could not be processed";
+"erro_api_default" = "We were unable to complete your request, please try again later.";
+
+//MARK: - Gerais
+"por_favor_aguarde" = "Please wait...";

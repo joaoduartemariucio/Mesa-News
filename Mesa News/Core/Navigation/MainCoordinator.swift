@@ -17,7 +17,11 @@ class MainCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        home()
+        if UserSessionHelper.instance.isUserLogged {
+            home()
+        }else {
+            bemVindo()
+        }
     }
     
     func bemVindo(){

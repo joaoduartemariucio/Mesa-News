@@ -24,7 +24,7 @@ class APIClient {
                     observer.onNext(value)
                     observer.onCompleted()
                     break
-                case .failure(let error):
+                case .failure:
                     switch response.response?.statusCode {
                     case 200:
                         observer.onError(APIError.noDecoded)
@@ -49,11 +49,14 @@ class APIClient {
                     case 409:
                         observer.onError(APIError.conflict)
                         break
+                    case 422:
+                        observer.onError(APIError.unprocessableEntity)
+                        break
                     case 500:
                         observer.onError(APIError.internalServerError)
                         break
                     default:
-                        observer.onError(error)
+                        observer.onError(APIError.notIdentified)
                         break
                     }
                 }

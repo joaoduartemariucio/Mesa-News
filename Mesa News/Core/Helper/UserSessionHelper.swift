@@ -12,14 +12,20 @@ class UserSessionHelper {
 
     static let instance = UserSessionHelper()
     
-    func salvarAutenticacaoUsuario(login: TokenCodable){
+    func salvarAutenticacaoUsuario(_ session: UserSession){
         PreferencesHelper.instance.saveCodable(
             key: Constants.App.Keys.user_token,
-            value: login
+            value: session
         )
     }
     
-    func recurperarAutenticacaoUsuario() -> TokenCodable? {
+    func recurperarAutenticacaoUsuario() -> UserSession? {
         return PreferencesHelper.instance.getCodable(key: Constants.App.Keys.user_token)
+    }
+    
+    var isUserLogged: Bool {
+        get {
+            return recurperarAutenticacaoUsuario() != nil
+        }
     }
 }

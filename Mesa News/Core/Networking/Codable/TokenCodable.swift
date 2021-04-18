@@ -10,9 +10,10 @@ import Foundation
 // MARK: - TokenCodable
 struct TokenCodable: Codable {
     
-    let token: String
+    var token: String?
+    var errors: [ErrorCodable]?
     
     enum CodingKeys: String, CodingKey {
-        case token
+        case token, errors
     }
 }

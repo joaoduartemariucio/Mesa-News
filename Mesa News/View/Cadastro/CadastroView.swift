@@ -232,6 +232,25 @@ class CadastroView: UIView, BaseView {
         }
     }
     
+    func setMensagensErro(erros: [ErrorCodable]){
+        
+        if let erroNome = erros.first(where: { $0.field == "name" }){
+            txtNome.setErrorMessage(erroNome.message)
+        }
+        
+        if let erroEmail = erros.first(where: { $0.field == "email" }){
+            txtEmail.setErrorMessage(erroEmail.message)
+        }
+        
+        if let erroSenha = erros.first(where: { $0.field == "password" }){
+            txtSenha.setErrorMessage(erroSenha.message)
+        }
+        
+        if let erroConfirmarSenha = erros.first(where: { $0.field == "password" }){
+            txtConfirmarSenha.setErrorMessage(erroConfirmarSenha.message)
+        }
+    }
+    
     func resetarErrosFormulario(){
         txtNome.resetarErrorMessage()
         txtEmail.resetarErrorMessage()

@@ -63,11 +63,17 @@ class CadastroViewController: UIViewController, BaseViewController {
                     .disposed(by: disposable)
 
         viewModel.mostrarMensagem.bind { value in
-            
+            if !value.isEmpty {
+                self.mostrarMensagem(value)
+            }
         }.disposed(by: disposable)
         
         viewModel.isLoading.bind { value in
-            
+            if value {
+                self.showLoading("por_favor_aguarde".translate)
+            }else {
+                self.hideLoading()
+            }
         }.disposed(by: disposable)
         
         viewModel.feedback.bind { value in
@@ -79,11 +85,14 @@ class CadastroViewController: UIViewController, BaseViewController {
         switch status {
         case .cadastradoSucesso:
             self.mostrarMensagem("usuario_cadastrado_sucesso".translate) { _ in
-                self.irParaTelaLogin()
+                self.irParaTelaHome()
             }
             break
         case .mostrarMensagensErro:
             presentationView.setMensagensErro(erros: viewModel.errosCadastro)
+            break
+        case .mostrarMensagensErroAPI:
+            presentationView.setMensagensErro(erros: viewModel.errosCadastroAPI)
             break
         case .resetarErrosFormulario:
             presentationView.resetarErrosFormulario()
@@ -93,9 +102,9 @@ class CadastroViewController: UIViewController, BaseViewController {
         }
     }
     
-    func irParaTelaLogin(){
-        self.coordinator?.parentCoordinator?.login()
-        self.navigationController?.viewControllers.removeAll(where: { $0 == self })
+    func irParaTelaHome(){
+        self.coordinator?.parentCoordinator?.home()
+        self.navigationController?.viewControllers.removeAll(where: { $0 == self  || $0 is BemVindoViewController})
         self.coordinator?.parentCoordinator?.childDidFinish(self.coordinator)
     }
 }

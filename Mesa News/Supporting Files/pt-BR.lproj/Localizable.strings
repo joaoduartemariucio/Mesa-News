@@ -38,3 +38,19 @@
 "tela_home" = "Notícias";
 "ultimas_noticias" = "Últimas notícias";
 "noticias_destaque" = "Destaques";
+
+//MARK: - Erros API
+"erro_noDecoded" = "Erro ao buscar os dados tente, recarregar a tela";
+"erro_noContent" = "Nada encontrado em nossa base de dados";
+"erro_badRequest" = "Falha ao solicitar o servidor se recusa a responder, tente verificar na loja se existe uma versão nova do app";
+"erro_unauthorized" = "Você não está autorizado a utilizar este serviço";
+"erro_forbidden" = "Nosso servidor recusou seu pedido, tente recarregar a tela";
+"erro_notFound" = "Esse recurso mudou, verifique na loja se existe uma nova versao do app";
+"erro_noAllowed" = "Recurso não encontrado, tente reenviar sua solicitação";
+"erro_conflict" = "Recurso mal processado, tente reenviar sua solicitação";
+"erro_internalServerError" = "Nosso servidor não está respondendo, tente reenviar sua solicitação mais tarde";
+"erro_unprocessableEntity" = "Não foi possível processar os dados informados";
+"erro_api_default" = "Não foi possivel realizar sua solicitação, por favor tente novamente mais tarde";
+
+//MARK: - Gerais
+"por_favor_aguarde" = "Por favor aguarde...";

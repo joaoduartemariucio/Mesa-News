@@ -8,7 +8,7 @@
 import Foundation
 
 enum CadastroStatus {
-    case cadastradoSucesso, mostrarMensagensErro, resetarErrosFormulario,`default`
+    case cadastradoSucesso, mostrarMensagensErro, mostrarMensagensErroAPI, resetarErrosFormulario,`default`
 }
 
 protocol CadastroViewModelInput {
@@ -25,6 +25,7 @@ protocol CadastroViewModelOutput {
     
     var feedback: BehaviorRelay<CadastroStatus> { get set }
     var errosCadastro: [ErrorModel<CadastroErrorType>] { get }
+    var errosCadastroAPI: [ErrorCodable] { get set }
 }
 
 class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewModelInput {
@@ -78,13 +79,39 @@ class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewMod
     var txtConfirmarSenhaObserver: BehaviorSubject<String> = BehaviorSubject<String>(value: "")
     
     func cadastrarUsuario() {
+        isLoading.accept(true)
         
         feedback.accept(.resetarErrosFormulario)
         
         if !model.isDadosCadastroValidos {
             feedback.accept(.mostrarMensagensErro)
+            isLoading.accept(false)
             return
         }
+        
+        UserClient.cadastro(user: model).asObservable().subscribe(
+            onNext: { result in
+                self.isLoading.accept(false)
+                
+                if let error = result.errors {
+                    self.errosCadastroAPI = error
+                    self.feedback.accept(.mostrarMensagensErroAPI)
+                    return
+                }
+                
+                if let token = result.token {
+                    let userSession = UserSession(token: token)
+                    UserSessionHelper.instance.salvarAutenticacaoUsuario(userSession)
+                    self.feedback.accept(.cadastradoSucesso)
+                }
+            },
+            onError: { error in
+                self.isLoading.accept(false)
+                let messageError = APIErrorMessageHelper.instance.retornaMensagemErroAPI(erro: error)
+                self.mostrarMensagem.accept(messageError)
+            }
+        ).disposed(by: disposable)
+        
     }
     
     //    MARK: CadastroViewModel Outputs
@@ -95,4 +122,6 @@ class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewMod
             return model.errors
         }
     }
+    
+    var errosCadastroAPI: [ErrorCodable] = [ErrorCodable]()
 }

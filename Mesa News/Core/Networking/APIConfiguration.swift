@@ -37,7 +37,7 @@ enum RequestParams {
 }
 
 enum APIError: Error {
-    case noDecoded           //Status code 200 mas não decodificou
+    case noDecoded              //Status code 200 mas não decodificou
     case noContent              //Status code 204
     case badRequest             //Status code 400
     case unauthorized           //Status code 401
@@ -45,5 +45,7 @@ enum APIError: Error {
     case notFound               //Status code 404
     case noAllowed              //Status code 405
     case conflict               //Status code 409
+    case unprocessableEntity    //Status code 422
     case internalServerError    //Status code 500
+    case notIdentified          //Status não tratado
 }

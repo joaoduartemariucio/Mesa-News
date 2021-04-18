@@ -63,7 +63,7 @@ class LoginView: UIView, BaseView {
         var btn = UIButton()
         btn.layer.cornerRadius = 11
         btn.backgroundColor = .colorPrimaryDark
-        btn.setTitle("confirmar".translate, for: .normal)
+        btn.setTitle("entrar".translate, for: .normal)
         btn.setTitleColor(.white, for: .normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         btn.translatesAutoresizingMaskIntoConstraints = false

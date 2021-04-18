@@ -31,6 +31,7 @@ struct Constants {
         }
         
         struct Image {
+            static let logo_app = "logo_app"
             static let ic_arroba = "ic_arroba"
             static let ic_password_visivel = "ic_password_visivel"
             static let ic_password_invisivel = "ic_password_invisivel"

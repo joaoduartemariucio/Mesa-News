@@ -6,6 +6,11 @@
   
 */
 
+//MARK: - Tela Bem Vindo
+"bem_vindo" = "Welcome to ";
+"bem_vindo_descricao" = "The best news from the sources you love, selected just for you.";
+"cadastre_se" = "Register";
+
 //MARK: - Tela Cadastro
 "tela_cadastro" = "Registration";
 "tela_cadastro_descricao" = "To register, just fill in all the fields below";
@@ -23,3 +28,8 @@
 "confirmar_senha_vazio" = "The confirm password field cannot be empty";
 "senhas_divergentes" = "The passwords are different";
 "usuario_cadastrado_sucesso" = "Your user has been successfully registered";
+
+//MARK: - Tela Login
+"tela_login" = "Log in";
+"tela_login_descricao" = "Fill in the fields below to login";
+"entrar" = "Enter";

@@ -6,6 +6,11 @@
   
 */
 
+//MARK: - Tela Bem Vindo
+"bem_vindo" = "Bem vindo ao ";
+"bem_vindo_descricao" = "As melhores notícias das fontes que você adora, selecionadas apenas para você.";
+"cadastre_se" = "Cadastre-se";
+
 //MARK: - Tela Cadastro
 "tela_cadastro" = "Cadastro";
 "tela_cadastro_descricao" = "Para fazer seu cadastro basta preencher todos os campos abaixo";
@@ -23,3 +28,8 @@
 "confirmar_senha_vazio" = "O campo confirmar senha não pode ser vazio";
 "senhas_divergentes" = "As senha estão diferentes";
 "usuario_cadastrado_sucesso" = "Seu usuário foi cadastrado com sucesso";
+
+//MARK: - Tela Login
+"tela_login" = "Entrar";
+"tela_login_descricao" = "Preencha os campos abaixo para entrar";
+"entrar" = "Entrar";

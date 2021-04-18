@@ -22,6 +22,8 @@ class BemVindoCoordinator: Coordinator {
     }
     
     func bemVindo(){
-        
+        let vc = BemVindoViewController()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
     }
 }

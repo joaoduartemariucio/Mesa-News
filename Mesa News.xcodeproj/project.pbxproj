@@ -43,6 +43,9 @@
 		F6B50CCA262BAD330014FB0D /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CC9262BAD330014FB0D /* ErrorModel.swift */; };
 		F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CCE262BAD4A0014FB0D /* CadastroErrorType.swift */; };
 		F6B50CDA262BD3FF0014FB0D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CD9262BD3FF0014FB0D /* UIViewController+Extension.swift */; };
+		F6B50CEB262BD6240014FB0D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CEA262BD6240014FB0D /* LoginView.swift */; };
+		F6B50CF0262BD6300014FB0D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CEF262BD6300014FB0D /* LoginViewController.swift */; };
+		F6B50CF6262BD64E0014FB0D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CF5262BD64E0014FB0D /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		F6B50CC9262BAD330014FB0D /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		F6B50CCE262BAD4A0014FB0D /* CadastroErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroErrorType.swift; sourceTree = "<group>"; };
 		F6B50CD9262BD3FF0014FB0D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		F6B50CEA262BD6240014FB0D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F6B50CEF262BD6300014FB0D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F6B50CF5262BD64E0014FB0D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B50CB2262B95430014FB0D /* Cadastro */,
+				F6B50CF4262BD6340014FB0D /* Login */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -399,6 +406,8 @@
 		F635A3D0262B89AE005F92D4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50CEA262BD6240014FB0D /* LoginView.swift */,
+				F6B50CEF262BD6300014FB0D /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -443,6 +452,14 @@
 				F6B50CBE262BA0B20014FB0D /* CadastroModelTests.swift */,
 			);
 			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		F6B50CF4262BD6340014FB0D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50CF5262BD64E0014FB0D /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -686,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B50CF0262BD6300014FB0D /* LoginViewController.swift in Sources */,
 				F6B50C9F262B90F80014FB0D /* Strings+Extensions.swift in Sources */,
 				F635A399262B83A5005F92D4 /* LoginCoordinator.swift in Sources */,
 				F6B50CA4262B911D0014FB0D /* TranslateHelper.swift in Sources */,
@@ -706,7 +724,9 @@
 				F635A37B262B80E4005F92D4 /* APIClient.swift in Sources */,
 				F635A3A7262B83AE005F92D4 /* BaseModel.swift in Sources */,
 				F635A3A8262B83AE005F92D4 /* BaseViewModel.swift in Sources */,
+				F6B50CF6262BD64E0014FB0D /* LoginViewModel.swift in Sources */,
 				F635A39A262B83A5005F92D4 /* BemVindoCoordinator.swift in Sources */,
+				F6B50CEB262BD6240014FB0D /* LoginView.swift in Sources */,
 				F635A390262B8396005F92D4 /* MainCoordinator.swift in Sources */,
 				F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */,
 				F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */,

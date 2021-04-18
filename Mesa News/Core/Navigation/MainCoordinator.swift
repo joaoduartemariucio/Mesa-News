@@ -17,7 +17,7 @@ class MainCoordinator: NSObject, Coordinator {
     }
     
     func start() {
-        bemVindo()
+        home()
     }
     
     func bemVindo(){
@@ -36,6 +36,13 @@ class MainCoordinator: NSObject, Coordinator {
     
     func login(){
         let child = LoginCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func home(){
+        let child = HomeCoordinator(navigationController: navigationController)
         child.parentCoordinator = self
         childCoordinators.append(child)
         child.start()

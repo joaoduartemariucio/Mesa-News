@@ -33,3 +33,8 @@
 "tela_login" = "Log in";
 "tela_login_descricao" = "Fill in the fields below to login";
 "entrar" = "Enter";
+
+//MARK: - Tela Home
+"tela_home" = "News";
+"ultimas_noticias" = "Latest news";
+"noticias_destaque" = "Highlights";

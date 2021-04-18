@@ -33,3 +33,8 @@
 "tela_login" = "Entrar";
 "tela_login_descricao" = "Preencha os campos abaixo para entrar";
 "entrar" = "Entrar";
+
+//MARK: - Tela Home
+"tela_home" = "Notícias";
+"ultimas_noticias" = "Últimas notícias";
+"noticias_destaque" = "Destaques";

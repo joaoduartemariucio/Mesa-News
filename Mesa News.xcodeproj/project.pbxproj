@@ -11,10 +11,8 @@
 		BE251C4D0DD0A974A46EDF99 /* Pods_Mesa_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80AC02DFCDA33C2BCD9FFF4 /* Pods_Mesa_NewsTests.framework */; };
 		CD8405D9A021CD3AA7BC1E77 /* Pods_Mesa_News_Mesa_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D91CE03FB8ED90A0A1864A /* Pods_Mesa_News_Mesa_NewsUITests.framework */; };
 		F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A301262B7A70005F92D4 /* AppDelegate.swift */; };
-		F635A306262B7A70005F92D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A305262B7A70005F92D4 /* ViewController.swift */; };
 		F635A30B262B7A71005F92D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F635A30A262B7A71005F92D4 /* Assets.xcassets */; };
 		F635A30E262B7A71005F92D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F635A30C262B7A71005F92D4 /* LaunchScreen.storyboard */; };
-		F635A319262B7A71005F92D4 /* Mesa_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A318262B7A71005F92D4 /* Mesa_NewsTests.swift */; };
 		F635A324262B7A71005F92D4 /* Mesa_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A323262B7A71005F92D4 /* Mesa_NewsUITests.swift */; };
 		F635A358262B7FC3005F92D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F635A35A262B7FC3005F92D4 /* Localizable.strings */; };
 		F635A35E262B7FC6005F92D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F635A360262B7FC6005F92D4 /* InfoPlist.strings */; };
@@ -33,6 +31,18 @@
 		F635A3CC262B88AE005F92D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3CB262B88AE005F92D4 /* Constants.swift */; };
 		F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */; };
 		F635A3DB262B89DB005F92D4 /* CadastroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3DA262B89DB005F92D4 /* CadastroView.swift */; };
+		F635A3E0262B8AC2005F92D4 /* FormularioField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3DF262B8AC2005F92D4 /* FormularioField.swift */; };
+		F635A3E5262B8AF3005F92D4 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A3E4262B8AF3005F92D4 /* UIColor+Extensions.swift */; };
+		F635A3EA262B8B70005F92D4 /* Icones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F635A3E9262B8B70005F92D4 /* Icones.xcassets */; };
+		F6B50C9F262B90F80014FB0D /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50C9E262B90F80014FB0D /* Strings+Extensions.swift */; };
+		F6B50CA4262B911D0014FB0D /* TranslateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */; };
+		F6B50CA9262B91640014FB0D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CA8262B91640014FB0D /* UIView+Extensions.swift */; };
+		F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CAD262B95400014FB0D /* CadastroViewModel.swift */; };
+		F6B50CB8262B95BA0014FB0D /* CadastroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CB7262B95BA0014FB0D /* CadastroModel.swift */; };
+		F6B50CBF262BA0B20014FB0D /* CadastroModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CBE262BA0B20014FB0D /* CadastroModelTests.swift */; };
+		F6B50CCA262BAD330014FB0D /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CC9262BAD330014FB0D /* ErrorModel.swift */; };
+		F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CCE262BAD4A0014FB0D /* CadastroErrorType.swift */; };
+		F6B50CDA262BD3FF0014FB0D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CD9262BD3FF0014FB0D /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +73,10 @@
 		CECDF45D0BEC73EA79D89AE6 /* Pods-Mesa News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa News.debug.xcconfig"; path = "Target Support Files/Pods-Mesa News/Pods-Mesa News.debug.xcconfig"; sourceTree = "<group>"; };
 		F635A2FE262B7A70005F92D4 /* Mesa News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mesa News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F635A301262B7A70005F92D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F635A305262B7A70005F92D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F635A30A262B7A71005F92D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F635A30D262B7A71005F92D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F635A30F262B7A71005F92D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F635A314262B7A71005F92D4 /* Mesa NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mesa NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F635A318262B7A71005F92D4 /* Mesa_NewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesa_NewsTests.swift; sourceTree = "<group>"; };
 		F635A31A262B7A71005F92D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F635A31F262B7A71005F92D4 /* Mesa NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mesa NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F635A323262B7A71005F92D4 /* Mesa_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesa_NewsUITests.swift; sourceTree = "<group>"; };
@@ -92,6 +100,18 @@
 		F635A3CB262B88AE005F92D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		F635A3DA262B89DB005F92D4 /* CadastroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroView.swift; sourceTree = "<group>"; };
+		F635A3DF262B8AC2005F92D4 /* FormularioField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioField.swift; sourceTree = "<group>"; };
+		F635A3E4262B8AF3005F92D4 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F635A3E9262B8B70005F92D4 /* Icones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icones.xcassets; sourceTree = "<group>"; };
+		F6B50C9E262B90F80014FB0D /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
+		F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHelper.swift; sourceTree = "<group>"; };
+		F6B50CA8262B91640014FB0D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F6B50CAD262B95400014FB0D /* CadastroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewModel.swift; sourceTree = "<group>"; };
+		F6B50CB7262B95BA0014FB0D /* CadastroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroModel.swift; sourceTree = "<group>"; };
+		F6B50CBE262BA0B20014FB0D /* CadastroModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroModelTests.swift; sourceTree = "<group>"; };
+		F6B50CC9262BAD330014FB0D /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		F6B50CCE262BAD4A0014FB0D /* CadastroErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroErrorType.swift; sourceTree = "<group>"; };
+		F6B50CD9262BD3FF0014FB0D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FABB236E67708D8ABF999FD9 /* Pods-Mesa NewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa NewsTests.release.xcconfig"; path = "Target Support Files/Pods-Mesa NewsTests/Pods-Mesa NewsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +198,6 @@
 				F635A348262B7F4C005F92D4 /* UI */,
 				F635A347262B7F47005F92D4 /* View */,
 				F635A346262B7F3C005F92D4 /* ViewModel */,
-				F635A305262B7A70005F92D4 /* ViewController.swift */,
 				F635A30C262B7A71005F92D4 /* LaunchScreen.storyboard */,
 			);
 			path = "Mesa News";
@@ -187,7 +206,7 @@
 		F635A317262B7A71005F92D4 /* Mesa NewsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F635A318262B7A71005F92D4 /* Mesa_NewsTests.swift */,
+				F6B50CBC262BA0970014FB0D /* Model */,
 				F635A31A262B7A71005F92D4 /* Info.plist */,
 			);
 			path = "Mesa NewsTests";
@@ -205,6 +224,7 @@
 		F635A346262B7F3C005F92D4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50CB2262B95430014FB0D /* Cadastro */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +249,7 @@
 		F635A349262B7F51005F92D4 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F635A3DF262B8AC2005F92D4 /* FormularioField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -246,6 +267,8 @@
 		F635A36C262B7FEE005F92D4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50CB6262B95AF0014FB0D /* Cadastro */,
+				F6B50CC9262BAD330014FB0D /* ErrorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				F635A30A262B7A71005F92D4 /* Assets.xcassets */,
+				F635A3E9262B8B70005F92D4 /* Icones.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -308,6 +332,7 @@
 		F635A372262B8025005F92D4 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -316,6 +341,10 @@
 			isa = PBXGroup;
 			children = (
 				F635A3B4262B85D9005F92D4 /* GlobalImports.swift */,
+				F635A3E4262B8AF3005F92D4 /* UIColor+Extensions.swift */,
+				F6B50C9E262B90F80014FB0D /* Strings+Extensions.swift */,
+				F6B50CA8262B91640014FB0D /* UIView+Extensions.swift */,
+				F6B50CD9262BD3FF0014FB0D /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -379,6 +408,39 @@
 			children = (
 				F635A3DA262B89DB005F92D4 /* CadastroView.swift */,
 				F635A3D2262B89CF005F92D4 /* CadastroViewController.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		F6B50CB2262B95430014FB0D /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50CAD262B95400014FB0D /* CadastroViewModel.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		F6B50CB6262B95AF0014FB0D /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50CCE262BAD4A0014FB0D /* CadastroErrorType.swift */,
+				F6B50CB7262B95BA0014FB0D /* CadastroModel.swift */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		F6B50CBC262BA0970014FB0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50CBD262BA0A00014FB0D /* Cadastro */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F6B50CBD262BA0A00014FB0D /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				F6B50CBE262BA0B20014FB0D /* CadastroModelTests.swift */,
 			);
 			path = Cadastro;
 			sourceTree = "<group>";
@@ -495,6 +557,7 @@
 				F635A30E262B7A71005F92D4 /* LaunchScreen.storyboard in Resources */,
 				F635A358262B7FC3005F92D4 /* Localizable.strings in Resources */,
 				F635A35E262B7FC6005F92D4 /* InfoPlist.strings in Resources */,
+				F635A3EA262B8B70005F92D4 /* Icones.xcassets in Resources */,
 				F635A30B262B7A71005F92D4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,21 +686,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6B50C9F262B90F80014FB0D /* Strings+Extensions.swift in Sources */,
 				F635A399262B83A5005F92D4 /* LoginCoordinator.swift in Sources */,
+				F6B50CA4262B911D0014FB0D /* TranslateHelper.swift in Sources */,
 				F635A3DB262B89DB005F92D4 /* CadastroView.swift in Sources */,
 				F635A39D262B83A5005F92D4 /* CadastroCoordinator.swift in Sources */,
+				F6B50CCA262BAD330014FB0D /* ErrorModel.swift in Sources */,
 				F635A3B5262B85D9005F92D4 /* GlobalImports.swift in Sources */,
+				F635A3E0262B8AC2005F92D4 /* FormularioField.swift in Sources */,
 				F635A3AA262B83AE005F92D4 /* Coordinator.swift in Sources */,
-				F635A306262B7A70005F92D4 /* ViewController.swift in Sources */,
+				F6B50CB8262B95BA0014FB0D /* CadastroModel.swift in Sources */,
 				F635A3CC262B88AE005F92D4 /* Constants.swift in Sources */,
+				F6B50CA9262B91640014FB0D /* UIView+Extensions.swift in Sources */,
 				F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */,
 				F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */,
+				F6B50CDA262BD3FF0014FB0D /* UIViewController+Extension.swift in Sources */,
+				F635A3E5262B8AF3005F92D4 /* UIColor+Extensions.swift in Sources */,
 				F635A3A9262B83AE005F92D4 /* BaseViewController.swift in Sources */,
 				F635A37B262B80E4005F92D4 /* APIClient.swift in Sources */,
 				F635A3A7262B83AE005F92D4 /* BaseModel.swift in Sources */,
 				F635A3A8262B83AE005F92D4 /* BaseViewModel.swift in Sources */,
 				F635A39A262B83A5005F92D4 /* BemVindoCoordinator.swift in Sources */,
 				F635A390262B8396005F92D4 /* MainCoordinator.swift in Sources */,
+				F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */,
+				F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */,
 				F635A3A6262B83AE005F92D4 /* BaseView.swift in Sources */,
 				F635A37C262B80E4005F92D4 /* APIConfiguration.swift in Sources */,
 			);
@@ -647,7 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F635A319262B7A71005F92D4 /* Mesa_NewsTests.swift in Sources */,
+				F6B50CBF262BA0B20014FB0D /* CadastroModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

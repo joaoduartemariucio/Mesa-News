@@ -130,13 +130,13 @@ class NoticiaDestaqueCell: UICollectionViewCell {
         ])
     }
     
-    func configCell(_ element: NoticiaCodable) {
+    func configCell(_ element: NoticiaElementCodable) {
         
         lblTituloNoticia.text = element.title
-        lblDescricaoNoticia.text = element.descricaoNoticia
+        lblDescricaoNoticia.text = element.descricao
         
         imagemNoticia.setImageURL(
-            url: element.imageURL,
+            url: element.imageURL ?? "",
             mode: .scaleAspectFill,
             color: nil
         )

@@ -63,10 +63,11 @@ class HomeView: UIView, BaseView {
     
     var tableView: UITableView = {
         var tableView = UITableView()
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         tableView.backgroundColor = .white
-        tableView.separatorColor = .gray
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
+        tableView.isScrollEnabled = false
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(UltimasNoticiasCell.self, forCellReuseIdentifier: UltimasNoticiasCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -159,10 +160,11 @@ class HomeView: UIView, BaseView {
         
         contentView.addSubview(tableView)
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: lblUltimaNoticias.bottomAnchor, constant: size.height * 0.025),
+            tableView.topAnchor.constraint(equalTo: lblUltimaNoticias.bottomAnchor, constant: size.height * 0.010),
             tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -size.height * 0.025)
+            tableView.heightAnchor.constraint(equalToConstant: size.height * 0.85),
+            tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
 }

@@ -16,13 +16,14 @@
 		F6100F8F262C6F1000525A3A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F8E262C6F1000525A3A /* HomeCoordinator.swift */; };
 		F6100F97262C8A7A00525A3A /* NoticiaDestaqueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F96262C8A7A00525A3A /* NoticiaDestaqueCell.swift */; };
 		F6100F9C262C8AE400525A3A /* IconeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F9B262C8AE400525A3A /* IconeView.swift */; };
-		F6100FB1262CA23F00525A3A /* NoticiasCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FB0262CA23F00525A3A /* NoticiasCodable.swift */; };
+		F6100FB1262CA23F00525A3A /* NoticiaCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FB0262CA23F00525A3A /* NoticiaCodable.swift */; };
 		F6100FB9262CBF0D00525A3A /* UltimasNoticiasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FB8262CBF0D00525A3A /* UltimasNoticiasCell.swift */; };
 		F6100FBE262CC0C100525A3A /* NoticiasClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FBD262CC0C100525A3A /* NoticiasClient.swift */; };
 		F6100FC3262CC0D900525A3A /* NoticiasRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FC2262CC0D900525A3A /* NoticiasRouter.swift */; };
 		F6100FC8262CC4C300525A3A /* ErrorCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FC7262CC4C300525A3A /* ErrorCodable.swift */; };
 		F6100FD2262CC62500525A3A /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FD1262CC62500525A3A /* UserSession.swift */; };
 		F6100FD7262CC79D00525A3A /* APIErrorMessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FD6262CC79D00525A3A /* APIErrorMessageHelper.swift */; };
+		F6100FDD262D17DD00525A3A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100FDC262D17DD00525A3A /* HomeModel.swift */; };
 		F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F635A301262B7A70005F92D4 /* AppDelegate.swift */; };
 		F635A30B262B7A71005F92D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F635A30A262B7A71005F92D4 /* Assets.xcassets */; };
 		F635A30E262B7A71005F92D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F635A30C262B7A71005F92D4 /* LaunchScreen.storyboard */; };
@@ -106,13 +107,14 @@
 		F6100F8E262C6F1000525A3A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		F6100F96262C8A7A00525A3A /* NoticiaDestaqueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaDestaqueCell.swift; sourceTree = "<group>"; };
 		F6100F9B262C8AE400525A3A /* IconeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconeView.swift; sourceTree = "<group>"; };
-		F6100FB0262CA23F00525A3A /* NoticiasCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiasCodable.swift; sourceTree = "<group>"; };
+		F6100FB0262CA23F00525A3A /* NoticiaCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaCodable.swift; sourceTree = "<group>"; };
 		F6100FB8262CBF0D00525A3A /* UltimasNoticiasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltimasNoticiasCell.swift; sourceTree = "<group>"; };
 		F6100FBD262CC0C100525A3A /* NoticiasClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiasClient.swift; sourceTree = "<group>"; };
 		F6100FC2262CC0D900525A3A /* NoticiasRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiasRouter.swift; sourceTree = "<group>"; };
 		F6100FC7262CC4C300525A3A /* ErrorCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodable.swift; sourceTree = "<group>"; };
 		F6100FD1262CC62500525A3A /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		F6100FD6262CC79D00525A3A /* APIErrorMessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorMessageHelper.swift; sourceTree = "<group>"; };
+		F6100FDC262D17DD00525A3A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		F635A2FE262B7A70005F92D4 /* Mesa News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mesa News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F635A301262B7A70005F92D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F635A30A262B7A71005F92D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		F6100F7B262C6E4800525A3A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F6100FDC262D17DD00525A3A /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -485,7 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				F6B50D2B262BFDA30014FB0D /* TokenCodable.swift */,
-				F6100FB0262CA23F00525A3A /* NoticiasCodable.swift */,
+				F6100FB0262CA23F00525A3A /* NoticiaCodable.swift */,
 				F6100FC7262CC4C300525A3A /* ErrorCodable.swift */,
 			);
 			path = Codable;
@@ -859,7 +862,7 @@
 				F6B50D46262BFEB60014FB0D /* DecoderHelper.swift in Sources */,
 				F6100F97262C8A7A00525A3A /* NoticiaDestaqueCell.swift in Sources */,
 				F6100F9C262C8AE400525A3A /* IconeView.swift in Sources */,
-				F6100FB1262CA23F00525A3A /* NoticiasCodable.swift in Sources */,
+				F6100FB1262CA23F00525A3A /* NoticiaCodable.swift in Sources */,
 				F635A302262B7A70005F92D4 /* AppDelegate.swift in Sources */,
 				F635A3D3262B89CF005F92D4 /* CadastroViewController.swift in Sources */,
 				F6100F7D262C6E6D00525A3A /* HomeViewController.swift in Sources */,
@@ -889,6 +892,7 @@
 				F6B50CCF262BAD4A0014FB0D /* CadastroErrorType.swift in Sources */,
 				F6100FBE262CC0C100525A3A /* NoticiasClient.swift in Sources */,
 				F635A3A6262B83AE005F92D4 /* BaseView.swift in Sources */,
+				F6100FDD262D17DD00525A3A /* HomeModel.swift in Sources */,
 				F6100FD2262CC62500525A3A /* UserSession.swift in Sources */,
 				F6100FC3262CC0D900525A3A /* NoticiasRouter.swift in Sources */,
 				F635A37C262B80E4005F92D4 /* APIConfiguration.swift in Sources */,

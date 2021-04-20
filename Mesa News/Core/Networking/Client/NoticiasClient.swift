@@ -9,11 +9,11 @@ import Foundation
 
 class NoticiasClient: APIClient {
     
-    static func buscarNoticias() -> Observable<NoticiasCodable> {
-        return request(NoticiasRouter.buscarNoticias(currentPage: 1, perPage: 20))
+    static func buscarNoticias(currentPage: Int, perPage: Int) -> Observable<NoticiaCodable> {
+        return request(NoticiasRouter.buscarNoticias(currentPage: currentPage, perPage: perPage))
     }
     
-    static func buscarNoticiasDestaque() -> Observable<NoticiasCodable> {
+    static func buscarNoticiasDestaque() -> Observable<NoticiaCodable> {
         return request(NoticiasRouter.buscarNoticiasDestaque)
     }
 }

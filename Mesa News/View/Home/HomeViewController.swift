@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, BaseViewController {
     override func loadView() {
         view = presentationView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,26 +34,39 @@ class HomeViewController: UIViewController, BaseViewController {
     func bindView() {
         
         presentationView.collectionView.rx.setDelegate(self).disposed(by: disposable)
+        presentationView.scroll.rx.setDelegate(self).disposed(by: disposable)
         
-        presentationView.collectionView.rx
-                    .itemSelected
-                    .bind { index in
-                        print(index)
-                    }.disposed(by: disposable)
+        presentationView.tableView.rx.willDisplayCell.bind { willDisplay in
+            if willDisplay.indexPath.row + 1 == self.viewModel.dataSourceNoticias.value.count {
+                self.viewModel.proximaPagina()
+            }
+        }.disposed(by: disposable)
         
-        viewModel.noticias
-                    .bind(
-                        to: presentationView
-                            .collectionView
-                            .rx
-                            .items(
-                                cellIdentifier: NoticiaDestaqueCell.identifier,
-                                cellType: NoticiaDestaqueCell.self
-                            )
-                    ) { row, data, cell in
-                        cell.configCell(data)
-                    }.disposed(by: disposable)
+        viewModel.dataSourceNoticiasDestaque
+            .bind(
+                to: presentationView.collectionView
+                    .rx
+                    .items(
+                        cellIdentifier: NoticiaDestaqueCell.identifier,
+                        cellType: NoticiaDestaqueCell.self
+                    )
+            ) { row, data, cell in
+                cell.configCell(data)
+            }.disposed(by: disposable)
         
+        viewModel.dataSourceNoticias
+            .bind(
+                to: presentationView
+                    .tableView
+                    .rx
+                    .items(
+                        cellIdentifier: UltimasNoticiasCell.identifier,
+                        cellType: UltimasNoticiasCell.self
+                    )
+            ) { row, data, cell in
+                cell.selectionStyle = .none
+                cell.configCell(data)
+            }.disposed(by: disposable)
     }
 }
 
@@ -74,5 +87,10 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.presentationView.tableView.isScrollEnabled = scrollView.bounds.contains(self.presentationView.tableView.frame)
+    }
+}
 

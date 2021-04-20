@@ -23,6 +23,10 @@ class UserSessionHelper {
         return PreferencesHelper.instance.getCodable(key: Constants.App.Keys.user_token)
     }
     
+    func clearSession(){
+        PreferencesHelper.instance.removeValue(key: Constants.App.Keys.user_token)
+    }
+    
     var isUserLogged: Bool {
         get {
             return recurperarAutenticacaoUsuario() != nil

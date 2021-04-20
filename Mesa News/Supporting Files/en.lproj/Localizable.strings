@@ -40,6 +40,8 @@
 "tela_home" = "News";
 "ultimas_noticias" = "Latest news";
 "noticias_destaque" = "Highlights";
+"cancel" = "Cancel";
+"confirmar_logout_sessao" = "Do you really want to end your session?";
 
 //MARK: - Erros API
 "erro_noDecoded" = "Error when searching for data, try reloading the screen";

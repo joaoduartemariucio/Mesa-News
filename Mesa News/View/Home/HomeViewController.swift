@@ -18,8 +18,22 @@ class HomeViewController: UIViewController, BaseViewController {
     var viewModel: HomeViewModel = HomeViewModel()
     var presentationView: HomeView = HomeView()
     
+    let btnLogout: UIBarButtonItem = {
+        var btn = UIBarButtonItem()
+        let image = UIImage(named: Constants.App.Image.ic_logout)?.withRenderingMode(.alwaysTemplate)
+        btn.image = image
+        btn.style = .plain
+        btn.imageInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: -15)
+        return btn
+    }()
+    
     override func loadView() {
         view = presentationView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.rightBarButtonItem = btnLogout
     }
     
     override func viewDidLoad() {
@@ -50,6 +64,10 @@ class HomeViewController: UIViewController, BaseViewController {
         presentationView.tableView.rx.itemSelected.bind { index in
             let noticia = self.viewModel.dataSourceNoticias.value[index.row]
             self.coordinator?.abrirNoticia(url: noticia.url)
+        }.disposed(by: disposable)
+        
+        btnLogout.rx.tap.bind {
+            self.encerrarSessao()
         }.disposed(by: disposable)
         
         viewModel.feedback.bind { value in
@@ -90,6 +108,28 @@ class HomeViewController: UIViewController, BaseViewController {
                 let gesture = UITapGestureRecognizer(target: self, action: #selector(self.favoritarNoticia(_:)))
                 cell.imgFavoritarNoticia.addGestureRecognizer(gesture)
             }.disposed(by: disposable)
+    }
+    
+    func encerrarSessao() {
+        
+        let alert = UIAlertController(title: Constants.App.name, message: "confirmar_logout_sessao".translate, preferredStyle: .alert)
+
+        alert.addAction(
+            UIAlertAction(
+                title: "confirmar".translate,
+                style: .default,
+                handler: { (action: UIAlertAction!) in
+                    self.viewModel.encerrarSessao()
+                    self.coordinator?.parentCoordinator?.bemVindo()
+                    self.navigationController?.viewControllers.removeAll(where: { $0 == self })
+                    self.coordinator?.parentCoordinator?.childDidFinish(self.coordinator)
+                }
+            )
+        )
+        
+        alert.addAction(UIAlertAction(title: "cancel".translate, style: .destructive, handler: nil))
+
+        present(alert, animated: true, completion: nil)
     }
     
     @objc func favoritarNoticiaDestaque(_ tap: UITapGestureRecognizer){

@@ -15,6 +15,7 @@ enum HomeStatus {
 protocol HomeViewModelInput {
     
     func proximaPagina()
+    func encerrarSessao()
     func favoritarNoticia(noticia: NoticiaElementCodable)
 }
 
@@ -112,5 +113,10 @@ class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
             self.feedback.accept(.item_destaque_favoritado)
             PreferencesHelper.instance.save(key: Constants.App.Keys.noticias_favoritadas, value: dataArray)
         }
+    }
+    
+    func encerrarSessao() {
+        UserSessionHelper.instance.clearSession()
+        PreferencesHelper.instance.clear()
     }
 }

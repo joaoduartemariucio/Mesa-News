@@ -40,6 +40,8 @@
 "tela_home" = "Notícias";
 "ultimas_noticias" = "Últimas notícias";
 "noticias_destaque" = "Destaques";
+"cancel" = "Cancelar";
+"confirmar_logout_sessao" = "Deseja mesmo encerrar sua sessão?";
 
 //MARK: - Erros API
 "erro_noDecoded" = "Erro ao buscar os dados tente, recarregar a tela";

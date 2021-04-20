@@ -61,6 +61,6 @@ class PreferencesHelper {
     }
     
     func clear(){
-        UserDefaults.standard.removeObject(forKey: Constants.App.Keys.user_token)
+        UserDefaults.standard.removeObject(forKey: Constants.App.Keys.noticias_favoritadas)
     }
 }

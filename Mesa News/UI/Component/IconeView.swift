@@ -60,6 +60,9 @@ class IconeView: UIView, BaseView {
         
         if let url = URL(string: url) {
             var options = ImageLoadingOptions(
+                placeholder: UIImage(named: Constants.App.Image.fake_blur_image),
+                transition: .fadeIn(duration: 0.25),
+                failureImage: UIImage(named: Constants.App.Image.fake_blur_image),
                 contentModes: .init(success: mode, failure: mode, placeholder: mode)
             )
             

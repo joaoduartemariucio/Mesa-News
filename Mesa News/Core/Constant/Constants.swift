@@ -43,6 +43,7 @@ struct Constants {
             static let ic_noticia_nao_favoritada = "ic_noticia_nao_favoritada"
             static let ic_noticia_favoritada = "ic_noticia_favoritada"
             static let ic_filtrar = "ic_filtrar"
+            static let fake_blur_image = "fake_blur_image"
         }
     }
 }

@@ -8,28 +8,42 @@
 import Foundation
 import RxSwiftExt
 
-class HomeViewModel: BaseViewModel {
+enum HomeStatus {
+    case item_destaque_favoritado, `default`
+}
+
+protocol HomeViewModelInput {
     
+    func proximaPagina()
+    func favoritarNoticiaDestaque(noticia: NoticiaElementCodable)
+}
+
+protocol HomeViewModelOutput {
+    
+    var feedback: BehaviorRelay<HomeStatus> { get set }
+    var dataSourceNoticias: BehaviorRelay<[NoticiaModel]> { get set }
+    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaElementCodable]> { get set}
+}
+
+class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
+    
+    //    MARK: HomeViewModel Outputs
+    var dataSourceNoticias: BehaviorRelay<[NoticiaModel]> = BehaviorRelay<[NoticiaModel]>(value: [NoticiaModel]())
+    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaElementCodable]> = BehaviorRelay<[NoticiaElementCodable]>(value: [NoticiaElementCodable]())
+    
+    var feedback: BehaviorRelay<HomeStatus> = BehaviorRelay<HomeStatus>(value: .default)
+    
+    //    MARK: BaseViewModel e functions
     var disposable: DisposeBag = DisposeBag()
-    
     var mostrarMensagem: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
     var isLoading: BehaviorRelay<Bool> = BehaviorRelay<Bool>(value: false)
     
     var model = HomeModel()
     
-    var dataSourceNoticias: BehaviorRelay<[NoticiaElementCodable]> = BehaviorRelay<[NoticiaElementCodable]>(value: [NoticiaElementCodable]())
-    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaElementCodable]> = BehaviorRelay<[NoticiaElementCodable]>(value: [NoticiaElementCodable]())
-    
     func viewDidLoad() {
         
         buscarListaNoticias(page: model.currentPage)
         buscarListaNoticiasDestaque()
-    }
-    
-    func proximaPagina() {
-        if model.checarSeExisteProximaPagina() {
-            self.buscarListaNoticias(page: model.nextPage)
-        }
     }
     
     func buscarListaNoticias(page: Int){
@@ -41,8 +55,7 @@ class HomeViewModel: BaseViewModel {
                     if let pagination = result.pagination {
                         self.model.setPagination(pagination)
                     }
-                    self.model.adicionarMaisNoticias(result.data)
-                    self.dataSourceNoticias.accept(self.model.data)
+                    self.adicionarNoticiasDataSource(result.data)
                 },
                 onError: { error in
                     
@@ -61,5 +74,42 @@ class HomeViewModel: BaseViewModel {
                     
                 }
             ).disposed(by: disposable)
+    }
+    
+    func adicionarNoticiasDataSource(_ novasNoticias: [NoticiaElementCodable]){
+        
+        var noticias = dataSourceNoticias.value
+        let novasNoticiasMap = novasNoticias.map( { NoticiaModel(codable: $0) } )
+        
+        noticias.append(contentsOf: novasNoticiasMap)
+        
+        let noticiasOrdenadas = noticias.sorted(by: { $0.publishedAt.compare($1.publishedAt) == .orderedDescending })
+        
+        model.setNoticias(noticiasOrdenadas)
+        
+        self.dataSourceNoticias.accept(noticiasOrdenadas)
+    }
+    
+    //    MARK: HomeViewModel Inputs
+    func proximaPagina() {
+        if model.checarSeExisteProximaPagina() {
+            self.buscarListaNoticias(page: model.nextPage)
+        }
+    }
+    
+    func favoritarNoticiaDestaque(noticia: NoticiaElementCodable) {
+        var dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_destaque_favoritadas)
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(noticia) {
+            
+            if !dataArray.contains(encoded) {
+                dataArray.append(encoded)
+            }else {
+                dataArray.removeAll(where: { $0 == encoded })
+            }
+            self.feedback.accept(.item_destaque_favoritado)
+            PreferencesHelper.instance.save(key: Constants.App.Keys.noticias_destaque_favoritadas, value: dataArray)
+        }
     }
 }

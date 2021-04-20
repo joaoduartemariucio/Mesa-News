@@ -24,7 +24,7 @@ struct NoticiaElementCodable: Codable {
     
     let author, content, descricao: String?
     let imageURL: String?
-    let publishedAt, title: String?
+    let publishedAt, title: String
     let url: String?
 
     enum CodingKeys: String, CodingKey {

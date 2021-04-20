@@ -28,6 +28,17 @@ protocol LoginViewModelOutput {
 
 class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
     
+    //    MARK: LoginViewModel Outputs
+    var feedback: BehaviorRelay<LoginStatus> = BehaviorRelay<LoginStatus>(value: .default)
+    
+    var errosLogin: [ErrorModel<LoginErrorType>] {
+        get {
+            return model.errors
+        }
+    }
+    
+    var errosLoginAPI: [ErrorCodable] = [ErrorCodable]()
+    
     //    MARK: BaseViewModel e functions
     var disposable: DisposeBag = DisposeBag()
     var isLoading: BehaviorRelay<Bool> = BehaviorRelay<Bool>(value: false)
@@ -93,15 +104,4 @@ class LoginViewModel: BaseViewModel, LoginViewModelInput, LoginViewModelOutput {
             }
         ).disposed(by: disposable)
     }
-    
-    //    MARK: LoginViewModel Outputs
-    var feedback: BehaviorRelay<LoginStatus> = BehaviorRelay<LoginStatus>(value: .default)
-    
-    var errosLogin: [ErrorModel<LoginErrorType>] {
-        get {
-            return model.errors
-        }
-    }
-    
-    var errosLoginAPI: [ErrorCodable] = [ErrorCodable]()
 }

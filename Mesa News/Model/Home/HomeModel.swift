@@ -10,7 +10,7 @@ import Foundation
 class HomeModel {
 
     var currentPage, perPage, totalPages, totalItems: Int
-    var data: [NoticiaElementCodable]
+    var data: [NoticiaModel]
     
     var nextPage: Int {
         get {
@@ -18,7 +18,7 @@ class HomeModel {
         }
     }
     
-    init(currentPage: Int, perPage: Int, totalPages: Int, totalItems: Int, data: [NoticiaElementCodable]) {
+    init(currentPage: Int, perPage: Int, totalPages: Int, totalItems: Int, data: [NoticiaModel]) {
         self.currentPage = currentPage
         self.perPage = perPage
         self.totalPages = totalPages
@@ -31,11 +31,10 @@ class HomeModel {
         self.perPage = 20
         self.totalPages = 0
         self.totalItems = 0
-        self.data = [NoticiaElementCodable]()
+        self.data = [NoticiaModel]()
     }
     
     func setPagination(_ pagination: PaginationCodable){
-        print("\(type(of: self)) setPagination: currentPage = \(pagination.currentPage)")
         self.currentPage = pagination.currentPage
         self.perPage = pagination.perPage
         self.totalItems = pagination.totalItems
@@ -53,7 +52,7 @@ class HomeModel {
         }
     }
     
-    func adicionarMaisNoticias(_ noticias: [NoticiaElementCodable]) {
-        self.data.append(contentsOf: noticias)
+    func setNoticias(_ noticias: [NoticiaModel]) {
+        self.data = noticias
     }
 }

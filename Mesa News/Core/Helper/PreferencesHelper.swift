@@ -35,6 +35,14 @@ class PreferencesHelper {
         shared.synchronize()
     }
     
+    func getDataArray(key: String) -> [Data] {
+        let shared = UserDefaults.standard
+        guard let arrayData = shared.array(forKey: key) as? [Data] else {
+            return [Data]()
+        }
+        return arrayData
+    }
+    
     func getCodable<T: Codable>(key: String)-> T? {
         let shared = UserDefaults.standard
         guard let data = shared.data(forKey: key) else { return nil }

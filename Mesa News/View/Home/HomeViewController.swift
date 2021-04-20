@@ -42,6 +42,12 @@ class HomeViewController: UIViewController, BaseViewController {
             }
         }.disposed(by: disposable)
         
+        viewModel.feedback.bind { value in
+            if value == .item_destaque_favoritado {
+                self.presentationView.collectionView.reloadData()
+            }
+        }.disposed(by: disposable)
+        
         viewModel.dataSourceNoticiasDestaque
             .bind(
                 to: presentationView.collectionView
@@ -52,6 +58,9 @@ class HomeViewController: UIViewController, BaseViewController {
                     )
             ) { row, data, cell in
                 cell.configCell(data)
+                cell.imgFavoritarNoticia.tag = row
+                let gesture = UITapGestureRecognizer(target: self, action: #selector(self.favoritarNoticiaDestaque(_:)))
+                cell.imgFavoritarNoticia.addGestureRecognizer(gesture)
             }.disposed(by: disposable)
         
         viewModel.dataSourceNoticias
@@ -67,6 +76,12 @@ class HomeViewController: UIViewController, BaseViewController {
                 cell.selectionStyle = .none
                 cell.configCell(data)
             }.disposed(by: disposable)
+    }
+    
+    @objc func favoritarNoticiaDestaque(_ tap: UITapGestureRecognizer){
+        guard let view = tap.view as? IconeView else { return }
+        let noticia = viewModel.dataSourceNoticiasDestaque.value[view.tag]
+        viewModel.favoritarNoticiaDestaque(noticia: noticia)
     }
 }
 

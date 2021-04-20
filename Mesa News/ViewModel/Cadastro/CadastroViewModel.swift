@@ -30,6 +30,17 @@ protocol CadastroViewModelOutput {
 
 class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewModelInput {
     
+    //    MARK: CadastroViewModel Outputs
+    var feedback: BehaviorRelay<CadastroStatus> = BehaviorRelay<CadastroStatus>(value: .default)
+    
+    var errosCadastro: [ErrorModel<CadastroErrorType>] {
+        get {
+            return model.errors
+        }
+    }
+    
+    var errosCadastroAPI: [ErrorCodable] = [ErrorCodable]()
+    
     //    MARK: BaseViewModel e functions
     var disposable: DisposeBag = DisposeBag()
     var isLoading: BehaviorRelay<Bool> = BehaviorRelay<Bool>(value: false)
@@ -113,15 +124,4 @@ class CadastroViewModel: BaseViewModel, CadastroViewModelOutput, CadastroViewMod
         ).disposed(by: disposable)
         
     }
-    
-    //    MARK: CadastroViewModel Outputs
-    var feedback: BehaviorRelay<CadastroStatus> = BehaviorRelay<CadastroStatus>(value: .default)
-    
-    var errosCadastro: [ErrorModel<CadastroErrorType>] {
-        get {
-            return model.errors
-        }
-    }
-    
-    var errosCadastroAPI: [ErrorCodable] = [ErrorCodable]()
 }

@@ -86,13 +86,13 @@ class UltimasNoticiasCell: UITableViewCell {
         ])
     }
     
-    func configCell(_ element: NoticiaElementCodable){
+    func configCell(_ element: NoticiaModel){
         
         lblTituloNoticia.text = element.title
         lblDescricaoNoticia.text = element.descricao
         
         imagemNoticia.setImageURL(
-            url: element.imageURL ?? "",
+            url: element.imageURL,
             mode: .scaleAspectFill,
             color: nil
         )

@@ -42,6 +42,16 @@ class HomeViewController: UIViewController, BaseViewController {
             }
         }.disposed(by: disposable)
         
+        presentationView.collectionView.rx.itemSelected.bind { index in
+            let noticia = self.viewModel.dataSourceNoticiasDestaque.value[index.row]
+            self.coordinator?.abrirNoticia(url: noticia.url)
+        }.disposed(by: disposable)
+        
+        presentationView.tableView.rx.itemSelected.bind { index in
+            let noticia = self.viewModel.dataSourceNoticias.value[index.row]
+            self.coordinator?.abrirNoticia(url: noticia.url)
+        }.disposed(by: disposable)
+        
         viewModel.feedback.bind { value in
             if value == .item_destaque_favoritado {
                 self.presentationView.tableView.reloadData()
@@ -85,7 +95,7 @@ class HomeViewController: UIViewController, BaseViewController {
     @objc func favoritarNoticiaDestaque(_ tap: UITapGestureRecognizer){
         guard let view = tap.view as? IconeView else { return }
         let noticia = viewModel.dataSourceNoticiasDestaque.value[view.tag]
-        viewModel.favoritarNoticia(noticia: noticia)
+        viewModel.favoritarNoticia(noticia: noticia.codableNoticia)
     }
     
     @objc func favoritarNoticia(_ tap: UITapGestureRecognizer){
@@ -118,4 +128,3 @@ extension HomeViewController: UIScrollViewDelegate {
         self.presentationView.tableView.isScrollEnabled = scrollView.bounds.contains(self.presentationView.tableView.frame)
     }
 }
-

@@ -18,12 +18,19 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        login()
+        home()
     }
     
-    func login() {
+    func home() {
         let vc = HomeViewController()
         vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func abrirNoticia(url: String){
+        let vc = NoticiaWebViewController()
+        vc.coordinator = self
+        vc.urlNoticia = url
         navigationController.pushViewController(vc, animated: true)
     }
 }

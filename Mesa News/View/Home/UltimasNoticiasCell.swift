@@ -116,21 +116,10 @@ class UltimasNoticiasCell: UITableViewCell {
             color: nil
         )
         
-        if checarSeFoiFavoritada(codable: element.codableNoticia) {
+        if element.checarSeFoiFavoritada() {
             imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_favoritada, mode: .scaleAspectFit)
         }else {
             imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_nao_favoritada, mode: .scaleAspectFit)
         }
-    }
-    
-    func checarSeFoiFavoritada(codable: NoticiaElementCodable) -> Bool {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(codable) {
-            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
-            if dataArray.contains(encoded) {
-                return true
-            }
-        }
-        return false
     }
 }

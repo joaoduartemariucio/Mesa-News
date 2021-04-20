@@ -130,32 +130,21 @@ class NoticiaDestaqueCell: UICollectionViewCell {
         ])
     }
     
-    func configCell(_ element: NoticiaElementCodable) {
+    func configCell(_ element: NoticiaModel) {
         
         lblTituloNoticia.text = element.title
         lblDescricaoNoticia.text = element.descricao
         
         imagemNoticia.setImageURL(
-            url: element.imageURL ?? "",
+            url: element.imageURL,
             mode: .scaleAspectFill,
             color: nil
         )
         
-        if checarSeFoiFavoritada(codable: element) {
+        if element.checarSeFoiFavoritada() {
             imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_favoritada, mode: .scaleAspectFit)
         }else {
             imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_nao_favoritada, mode: .scaleAspectFit)
         }
-    }
-    
-    func checarSeFoiFavoritada(codable: NoticiaElementCodable) -> Bool {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(codable) {
-            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
-            if dataArray.contains(encoded) {
-                return true
-            }
-        }
-        return false
     }
 }

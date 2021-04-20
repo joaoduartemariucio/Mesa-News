@@ -22,14 +22,14 @@ protocol HomeViewModelOutput {
     
     var feedback: BehaviorRelay<HomeStatus> { get set }
     var dataSourceNoticias: BehaviorRelay<[NoticiaModel]> { get set }
-    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaElementCodable]> { get set}
+    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaModel]> { get set}
 }
 
 class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
     
     //    MARK: HomeViewModel Outputs
     var dataSourceNoticias: BehaviorRelay<[NoticiaModel]> = BehaviorRelay<[NoticiaModel]>(value: [NoticiaModel]())
-    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaElementCodable]> = BehaviorRelay<[NoticiaElementCodable]>(value: [NoticiaElementCodable]())
+    var dataSourceNoticiasDestaque: BehaviorRelay<[NoticiaModel]> = BehaviorRelay<[NoticiaModel]>(value: [NoticiaModel]())
     
     var feedback: BehaviorRelay<HomeStatus> = BehaviorRelay<HomeStatus>(value: .default)
     
@@ -68,7 +68,8 @@ class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
             .asObservable()
             .subscribe(
                 onNext: { result in
-                    self.dataSourceNoticiasDestaque.accept(result.data)
+                    let noticiasMap = result.data.map( { NoticiaModel(codable: $0) } )
+                    self.dataSourceNoticiasDestaque.accept(noticiasMap)
                 },
                 onError: { error in
                     

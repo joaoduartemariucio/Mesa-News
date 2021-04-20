@@ -26,4 +26,15 @@ class NoticiaModel {
         self.url = codable.url ?? ""
         self.codableNoticia = codable
     }
+    
+    func checarSeFoiFavoritada() -> Bool {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(self.codableNoticia) {
+            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
+            if dataArray.contains(encoded) {
+                return true
+            }
+        }
+        return false
+    }
 }

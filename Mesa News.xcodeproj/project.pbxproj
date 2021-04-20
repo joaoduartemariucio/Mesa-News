@@ -10,6 +10,7 @@
 		0DC5200BECE5EFAB889CF727 /* Pods_Mesa_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3CF1C327423FF248D86553 /* Pods_Mesa_News.framework */; };
 		BE251C4D0DD0A974A46EDF99 /* Pods_Mesa_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B80AC02DFCDA33C2BCD9FFF4 /* Pods_Mesa_NewsTests.framework */; };
 		CD8405D9A021CD3AA7BC1E77 /* Pods_Mesa_News_Mesa_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D91CE03FB8ED90A0A1864A /* Pods_Mesa_News_Mesa_NewsUITests.framework */; };
+		F605D409262E7C90003B091B /* NoticiaWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F605D408262E7C90003B091B /* NoticiaWebViewController.swift */; };
 		F6100F7D262C6E6D00525A3A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F7C262C6E6D00525A3A /* HomeViewController.swift */; };
 		F6100F85262C6E7D00525A3A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F84262C6E7D00525A3A /* HomeView.swift */; };
 		F6100F8A262C6EC800525A3A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6100F89262C6EC800525A3A /* HomeViewModel.swift */; };
@@ -50,6 +51,7 @@
 		F635A3EA262B8B70005F92D4 /* Icones.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F635A3E9262B8B70005F92D4 /* Icones.xcassets */; };
 		F6799120262E57FB000B7CC1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F679911F262E57FB000B7CC1 /* Date+Extension.swift */; };
 		F6799132262E5AB6000B7CC1 /* NoticiaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6799131262E5AB6000B7CC1 /* NoticiaModel.swift */; };
+		F6799141262E72F9000B7CC1 /* ItemSwitchCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6799140262E72F9000B7CC1 /* ItemSwitchCustom.swift */; };
 		F6B50C9F262B90F80014FB0D /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50C9E262B90F80014FB0D /* Strings+Extensions.swift */; };
 		F6B50CA4262B911D0014FB0D /* TranslateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */; };
 		F6B50CA9262B91640014FB0D /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B50CA8262B91640014FB0D /* UIView+Extensions.swift */; };
@@ -103,6 +105,7 @@
 		87B789C8AFF447F423F58BCC /* Pods-Mesa News-Mesa NewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa News-Mesa NewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mesa News-Mesa NewsUITests/Pods-Mesa News-Mesa NewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80AC02DFCDA33C2BCD9FFF4 /* Pods_Mesa_NewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mesa_NewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECDF45D0BEC73EA79D89AE6 /* Pods-Mesa News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mesa News.debug.xcconfig"; path = "Target Support Files/Pods-Mesa News/Pods-Mesa News.debug.xcconfig"; sourceTree = "<group>"; };
+		F605D408262E7C90003B091B /* NoticiaWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaWebViewController.swift; sourceTree = "<group>"; };
 		F6100F7C262C6E6D00525A3A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F6100F84262C6E7D00525A3A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F6100F89262C6EC800525A3A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -151,6 +154,7 @@
 		F635A3E9262B8B70005F92D4 /* Icones.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icones.xcassets; sourceTree = "<group>"; };
 		F679911F262E57FB000B7CC1 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		F6799131262E5AB6000B7CC1 /* NoticiaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticiaModel.swift; sourceTree = "<group>"; };
+		F6799140262E72F9000B7CC1 /* ItemSwitchCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSwitchCustom.swift; sourceTree = "<group>"; };
 		F6B50C9E262B90F80014FB0D /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
 		F6B50CA3262B911D0014FB0D /* TranslateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHelper.swift; sourceTree = "<group>"; };
 		F6B50CA8262B91640014FB0D /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -237,6 +241,7 @@
 				F6100F7C262C6E6D00525A3A /* HomeViewController.swift */,
 				F6100F96262C8A7A00525A3A /* NoticiaDestaqueCell.swift */,
 				F6100FB8262CBF0D00525A3A /* UltimasNoticiasCell.swift */,
+				F605D408262E7C90003B091B /* NoticiaWebViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 			children = (
 				F635A3DF262B8AC2005F92D4 /* FormularioField.swift */,
 				F6100F9B262C8AE400525A3A /* IconeView.swift */,
+				F6799140262E72F9000B7CC1 /* ItemSwitchCustom.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -859,6 +865,7 @@
 				F6B50CCA262BAD330014FB0D /* ErrorModel.swift in Sources */,
 				F6B50D15262BE0680014FB0D /* BemVindoViewModel.swift in Sources */,
 				F6100FB9262CBF0D00525A3A /* UltimasNoticiasCell.swift in Sources */,
+				F605D409262E7C90003B091B /* NoticiaWebViewController.swift in Sources */,
 				F635A3B5262B85D9005F92D4 /* GlobalImports.swift in Sources */,
 				F635A3E0262B8AC2005F92D4 /* FormularioField.swift in Sources */,
 				F635A3AA262B83AE005F92D4 /* Coordinator.swift in Sources */,
@@ -891,6 +898,7 @@
 				F6B50D31262BFDF60014FB0D /* UserClient.swift in Sources */,
 				F6799132262E5AB6000B7CC1 /* NoticiaModel.swift in Sources */,
 				F6B50CFC262BD6A00014FB0D /* LoginModel.swift in Sources */,
+				F6799141262E72F9000B7CC1 /* ItemSwitchCustom.swift in Sources */,
 				F6B50D01262BD9410014FB0D /* LoginErrorType.swift in Sources */,
 				F6100F8F262C6F1000525A3A /* HomeCoordinator.swift in Sources */,
 				F6B50CAE262B95400014FB0D /* CadastroViewModel.swift in Sources */,

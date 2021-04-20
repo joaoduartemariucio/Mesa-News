@@ -36,6 +36,14 @@ class UltimasNoticiasCell: UITableViewCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
+    
+    var imgFavoritarNoticia: IconeView = {
+        var img = IconeView()
+        img.setIcone(named: Constants.App.Image.ic_noticia_nao_favoritada, mode: .scaleAspectFit)
+        img.setTintColor(.white)
+        img.translatesAutoresizingMaskIntoConstraints = false
+        return img
+    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,6 +59,7 @@ class UltimasNoticiasCell: UITableViewCell {
         setupImagemNoticia()
         setupTituloNoticia()
         setupDescricaoNoticia()
+        setupFavoritarNoticia()
     }
     
     func setupImagemNoticia(){
@@ -86,6 +95,16 @@ class UltimasNoticiasCell: UITableViewCell {
         ])
     }
     
+    func setupFavoritarNoticia(){
+        contentView.addSubview(imgFavoritarNoticia)
+        NSLayoutConstraint.activate([
+            imgFavoritarNoticia.topAnchor.constraint(equalTo: imagemNoticia.topAnchor, constant:  size.width * 0.015),
+            imgFavoritarNoticia.trailingAnchor.constraint(equalTo: imagemNoticia.trailingAnchor, constant: -size.width * 0.010),
+            imgFavoritarNoticia.widthAnchor.constraint(equalToConstant: 26),
+            imgFavoritarNoticia.heightAnchor.constraint(equalToConstant: 26)
+        ])
+    }
+    
     func configCell(_ element: NoticiaModel){
         
         lblTituloNoticia.text = element.title
@@ -96,5 +115,22 @@ class UltimasNoticiasCell: UITableViewCell {
             mode: .scaleAspectFill,
             color: nil
         )
+        
+        if checarSeFoiFavoritada(codable: element.codableNoticia) {
+            imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_favoritada, mode: .scaleAspectFit)
+        }else {
+            imgFavoritarNoticia.setIcone(named: Constants.App.Image.ic_noticia_nao_favoritada, mode: .scaleAspectFit)
+        }
+    }
+    
+    func checarSeFoiFavoritada(codable: NoticiaElementCodable) -> Bool {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(codable) {
+            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
+            if dataArray.contains(encoded) {
+                return true
+            }
+        }
+        return false
     }
 }

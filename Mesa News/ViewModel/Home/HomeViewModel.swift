@@ -15,7 +15,7 @@ enum HomeStatus {
 protocol HomeViewModelInput {
     
     func proximaPagina()
-    func favoritarNoticiaDestaque(noticia: NoticiaElementCodable)
+    func favoritarNoticia(noticia: NoticiaElementCodable)
 }
 
 protocol HomeViewModelOutput {
@@ -97,8 +97,8 @@ class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
         }
     }
     
-    func favoritarNoticiaDestaque(noticia: NoticiaElementCodable) {
-        var dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_destaque_favoritadas)
+    func favoritarNoticia(noticia: NoticiaElementCodable) {
+        var dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
         
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(noticia) {
@@ -109,7 +109,7 @@ class HomeViewModel: BaseViewModel, HomeViewModelInput, HomeViewModelOutput {
                 dataArray.removeAll(where: { $0 == encoded })
             }
             self.feedback.accept(.item_destaque_favoritado)
-            PreferencesHelper.instance.save(key: Constants.App.Keys.noticias_destaque_favoritadas, value: dataArray)
+            PreferencesHelper.instance.save(key: Constants.App.Keys.noticias_favoritadas, value: dataArray)
         }
     }
 }

@@ -14,6 +14,7 @@ class NoticiaModel {
     let publishedAt: Date
     let url: String
     let favoritada: Bool = false
+    let codableNoticia: NoticiaElementCodable
     
     init(codable: NoticiaElementCodable) {
         self.author = codable.author ?? ""
@@ -23,5 +24,6 @@ class NoticiaModel {
         self.publishedAt = codable.publishedAt.dateFromISO8601
         self.title = codable.title
         self.url = codable.url ?? ""
+        self.codableNoticia = codable
     }
 }

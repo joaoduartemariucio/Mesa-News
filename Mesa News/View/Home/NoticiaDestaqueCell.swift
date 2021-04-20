@@ -151,7 +151,7 @@ class NoticiaDestaqueCell: UICollectionViewCell {
     func checarSeFoiFavoritada(codable: NoticiaElementCodable) -> Bool {
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(codable) {
-            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_destaque_favoritadas)
+            let dataArray = PreferencesHelper.instance.getDataArray(key: Constants.App.Keys.noticias_favoritadas)
             if dataArray.contains(encoded) {
                 return true
             }

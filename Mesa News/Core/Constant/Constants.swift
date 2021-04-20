@@ -30,7 +30,7 @@ struct Constants {
         
         struct Keys {
             static let user_token = "user_token"
-            static let noticias_destaque_favoritadas = "noticias_destaque_favoritadas"
+            static let noticias_favoritadas = "noticias_favoritadas"
         }
         
         struct Image {
